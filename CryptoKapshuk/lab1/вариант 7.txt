@@ -1,0 +1,16 @@
+Face detection is the first step in automated face recognition. Its reliability has a major influence
+on the performance and usability of the entire face recognition system. Given a single image
+or a video, an ideal face detector should be able to identify and locate all the present faces
+regardless of their position, scale, orientation, age, and expression. Furthermore, the detection
+should be irrespective of extraneous illumination conditions and the image and video content.
+Face detection can be performed based on several cues: skin color (for faces in color images
+and videos), motion (for faces in videos), facial/head shape, facial appearance, or a combination
+of these parameters. Most successful face detection algorithms are appearance-based without
+using other cues. The processing is done as follows: An input image is scanned at all possible
+locations and scales by a subwindow. Face detection is posed as classifying the pattern in
+the subwindow as either face or nonface. The face/nonface classifier is learned from face and
+nonface training examples using statistical learning methods.
+This chapter focuses on appearance-based and learning-based methods. More attention is
+paid to AdaBoost learning-based methods because so far they are the most successful ones in
+terms of detection accuracy and speed. The reader is also referred to review articles, such as
+those of Hjelmas and Low [12] and Yang et al. [52], for other face detection methods.

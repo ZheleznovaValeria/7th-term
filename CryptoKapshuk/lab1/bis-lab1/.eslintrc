@@ -1,0 +1,49 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "standard",
+        "prettier"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "import/export": 0,
+        "no-unused-vars": "warn",
+        "react/prop-types": 0,
+        "camelcase": 0,
+        "react/react-in-jsx-scope": 0,
+        "no-magic-numbers": [
+            "error",
+            {
+                "ignore": [
+                    -1,
+                    0,
+                    1, 
+                    32, 
+                    65,
+                    26, 
+                    97
+                ],
+                "ignoreArrayIndexes": true
+            }
+        ]
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
+}
