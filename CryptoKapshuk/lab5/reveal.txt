@@ -1,0 +1,24 @@
+4 Image Analysis with a 3D Morphable Model
+In the analysis by synthesis framework, an algorithm seeks the parameters of the model that render
+a face as close to the input image as possible. These parameters explain the image and can
+be used for high-level tasks such as identification. This algorithm is called a fitting algorithm.
+It is characterized by the following four features.
+- Efficient: The computational load allowed for the fitting algorithm is clearly dependent on
+the applications. Security applications, for instance, require fast algorithms (i.e., near real
+time).
+- Robust (against non-Gaussian noise): The assumption of normality of the difference between
+the image synthesized by the model and the input image is generally violated owing
+to the presence of accessories or artifacts (glasses, hair, specular highlight).
+- Accurate: As we have already pointed out, accuracy is crucial for the application that is to
+use the fitting results (and generally the level of accuracy required depends thereon).
+- Automatic: The fitting should require as little human intervention as possible, optimally
+with no initialization.
+An algorithm capable of any of the four aforementioned features is difficult to set up. An algorithm
+capable of all four features is the holy grail of model-based computer vision. In this
+chapter we present two fitting algorithms. The first one, called stochastic newton optimization
+(SNO) is accurate but computationally expensive: a fitting takes 4.5 minutes on a 2 GHz Pentium
+IV. SNO is detailed elsewhere [7]. The second fitting algorithm is a 3D extension of the
+inverse compositional image alignment (ICIA) algorithm introduced by Baker and Matthews
+[1]. It is more efficient than SNO, and a fitting requires 30 seconds on the same machine. Our
+ICIA algorithm was introduced by Romdhani and Vetter [26].
+As initialization, the algorithms require the correspondences between

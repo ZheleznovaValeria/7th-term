@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>Lab 1 - Crypto</title>
+    </head>
+    <body class="content-wrap">
+        <div class="content">
+            <div class="text">
+                <label for="text">Input:</label>
+                <textarea id="text" cols="50" rows="5" style="width:40em; height:150px">Koval Diana</textarea>
+                <label for="output" style="margin-top: 30px;">Output:</label>
+                <textarea id="output" cols="50" rows="5" style="width:40em; height:150px" placeholder="The result is ..."></textarea>
+            </div>
+            <div class="key">
+                <label for="key">Key:</label>
+                <input type="text" value="abc" id="key" style="width:10em">
+            </div>
+            <div class="buttons">
+                <button id="encrypt">Encrypt</button>
+                <button id="decrypt">Decrypt</button>
+            </div>
+        </div>
+        <script src="vigenere-cipher.js" defer></script>
+    </body>
+</html>

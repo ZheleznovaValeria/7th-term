@@ -1,0 +1,16 @@
+To build a statistical model, we require a set of training images. The set should be chosen
+so it covers the types of variation we wish the model to represent. For instance, if we are
+interested only in faces with neutral expressions, we should include only neutral expressions in
+the model. If, however, we wish to be able to synthesize and recognize a range of expressions,
+the training set should include images of people smiling, frowning, winking, and so on. The
+faces in the training set should be of a resolution at least as high as those in the images we wish
+to synthesize or interpret.
+Each face must then be annotated with a set of points defining the key facial features. These
+points are used to define the correspondences across the training set and represent the shape
+of the face in the image. Thus the same number of points should be placed on each image and
+with the same set of labels. For instance, the first point might be the center of the left eye,
+the second the center of the right eye, and so on. Figure 3.1 shows a set of 68 points used to
+annotate frontal faces. The more points used, the more subtle are the variations in shape that
+can be represented. Typically, one would place points around the main facial features (eyes,
+nose, mouth, eyebrows) together with points around the outline to define the boundary of the
+face.

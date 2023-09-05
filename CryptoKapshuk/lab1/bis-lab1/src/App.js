@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import './styles.scss'
 
 const LOWERCASE_MIN_IDX = 97
@@ -101,13 +101,9 @@ function App() {
 		} else {
 			const crypted = crypt(fileText, keyArray)
 			setCryptedText(crypted)
-      setDecryptedText('')
+			setDecryptedText('')
 		}
 	}
-
-	useEffect(() => {
-		console.log(keyText)
-	}, [keyText])
 
 	return (
 		<div className='app'>
@@ -122,12 +118,14 @@ function App() {
 			<button className='app-input-button' onClick={showFile}>
 				Upload file
 			</button>
-			<div className='app-file-content'>
-				<p className='app-file-content__title'>Content of uploaded file:</p>
-				<div className='app-file-content__container'>
-					<p className='app-file-content__container-text'>{fileText}</p>
+			{fileText && (
+				<div className='app-file-content'>
+					<p className='app-file-content__title'>Content of uploaded file:</p>
+					<div className='app-file-content__container'>
+						<p className='app-file-content__container-text'>{fileText}</p>
+					</div>
 				</div>
-			</div>
+			)}
 			<p className='app-inputkey'>Input your key</p>
 			<input
 				className='app-key'
@@ -139,21 +137,27 @@ function App() {
 			<button className='app-input-button' onClick={() => doCrypt(false)}>
 				Encrypt
 			</button>
-			<div className='app-file-content'>
-				<p className='app-file-content__title'>Encrypted text with your key:</p>
-				<div className='app-file-content__container'>
-					<p className='app-file-content__container-text'>{crypredText}</p>
+			{crypredText && (
+				<div className='app-file-content'>
+					<p className='app-file-content__title'>
+						Encrypted text with your key:
+					</p>
+					<div className='app-file-content__container'>
+						<p className='app-file-content__container-text'>{crypredText}</p>
+					</div>
 				</div>
-			</div>
+			)}
 			<button className='app-input-button' onClick={() => doCrypt(true)}>
 				Decrypt
 			</button>
-			<div className='app-file-content'>
-				<p className='app-file-content__title'>Decrypted text:</p>
-				<div className='app-file-content__container'>
-					<p className='app-file-content__container-text'>{decryptedText}</p>
+			{decryptedText && (
+				<div className='app-file-content'>
+					<p className='app-file-content__title'>Decrypted text:</p>
+					<div className='app-file-content__container'>
+						<p className='app-file-content__container-text'>{decryptedText}</p>
+					</div>
 				</div>
-			</div>
+			)}
 		</div>
 	)
 }

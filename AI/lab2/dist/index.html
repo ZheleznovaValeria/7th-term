@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Lab 2 - Expert System</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="/js.00a46daa.css"></head>
+<body>
+    <div class="wrap">
+        <h1><strong>Діагностика головного болю</strong></h1>
+
+        <div class="form-wrap">
+            <form id="form-one" class="active">
+                <div class="form-input">
+                    <input id="unclear" type="radio" name="form-one" value="діагноз головного болю незрозмілий">
+                    <label for="unclear">діагноз головного болю незрозмілий</label>
+                </div>
+
+                <div class="form-input">
+                    <input id="first-time" type="radio" name="form-one" value="можливо первинний головний біль">
+                    <label for="first-time">можливо первинний головний біль</label>
+                </div>
+
+                <div class="form-input">
+                    <input id="storm" type="radio" name="form-one" value="громоподібний головний біль">
+                    <label for="storm">громоподібний головний біль</label>
+                </div>
+            </form>
+
+            <form id="form-one-unclear">
+                <h3><strong>Симптоми "красні флажки" крім випадкового початку?</strong></h3>
+
+                <div class="form-input">
+                    <input id="unclear-yes" type="radio" name="form-one-unclear" value="так">
+                    <label for="unclear-yes">так</label>
+                </div>
+
+                <div class="form-input">
+                    <input id="unclear-no" type="radio" name="form-one-unclear" value="ні">
+                    <label for="unclear-no">ні</label>
+                </div>
+            </form>
+
+            <form id="form-one-first-time">
+                <h3><strong>Первинний головний біль з атиповою течією?</strong></h3>
+
+                <div class="form-input">
+                    <input id="first-time-yes" type="radio" name="form-one-first-time" value="так">
+                    <label for="first-time-yes">так</label>
+                </div>
+
+                <div class="form-input">
+                    <input id="first-time-no" type="radio" name="form-one-first-time" value="ні">
+                    <label for="first-time-no">ні</label>
+                </div>
+            </form>
+
+            <form id="form-one-storm">
+                <h3><strong>Нейровізуалізація (КТ) ?</strong></h3>
+
+                <div class="form-input">
+                    <input id="storm-yes" type="radio" name="form-one-storm" value="позитивна">
+                    <label for="storm-yes">позитивна</label>
+                </div>
+
+                <div class="form-input">
+                    <input id="storm-no" type="radio" name="form-one-storm" value="негативна">
+                    <label for="storm-no">негативна</label>
+                </div>
+            </form>
+
+            <form id="form-two-unclear">
+                <h3><strong>Нейровізуалізація (МРТ) ?</strong></h3>
+
+                <div class="form-input">
+                    <input id="two-unclear-yes" type="radio" name="form-two-unclear" value="позитивна">
+                    <label for="storm-yes">позитивна</label>
+                </div>
+
+                <div class="form-input">
+                    <input id="two-unclear-no" type="radio" name="form-two-unclear" value="негативна">
+                    <label for="storm-no">негативна</label>
+                </div>
+            </form>
+
+            <form id="form-two-other">
+                <h3><strong>Інші свідчення ?</strong></h3>
+
+                <div class="form-input">
+                    <input id="other-yes" type="radio" name="form-two-other" value="так">
+                    <label for="other-yes">так</label>
+                </div>
+
+                <div class="form-input">
+                    <input id="other-no" type="radio" name="form-two-other" value="ні">
+                    <label for="other-no">ні</label>
+                </div>
+            </form>
+
+            <form id="form-last">
+                <h3><strong>Визначені причини вторичного головного болю ?</strong></h3>
+
+
+                <div class="form-input">
+                    <input id="last-yes" type="radio" name="form-last" value="так">
+                    <label for="last-yes">так</label>
+                </div>
+
+                <div class="form-input">
+                    <input id="last-no" type="radio" name="form-last" value="ні">
+                    <label for="last-no">ні</label>
+                </div>
+            </form>
+
+            <button id="next" type="button">далі</button>
+
+            <div id="result">
+                <p id="result-one">
+                    Вести як первинний головний біль, динамічне обстеження
+                </p>
+
+                <p id="result-two">
+                    Лікування основного захворювання
+                </p>
+
+                <p id="result-three">
+                    Додаткові дослідження
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/js.00a46daa.js"></script>
+</body>
+</html>
